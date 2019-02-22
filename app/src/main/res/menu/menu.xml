@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <group>
+        <item android:id="@+id/map_btn"
+            android:title="Map"
+            android:icon="@drawable/map_icon"
+            />
+        <item android:id="@+id/rating_table_btn"
+            android:title="Rating Table"
+            android:icon="@drawable/rating_icon"
+            />
+        <item android:id="@+id/favorite_places_btn"
+            android:title="My Favorite Places"
+            android:icon="@drawable/favorite_places_icon"
+            />
+
+        <item android:id="@+id/settings_btn"
+            android:title="Settings"
+            android:icon="@drawable/settings_icon"
+            />
+        </group>
+
+        <item android:title=""
+            android:id="@+id/itemMap">
+                <menu android:id="@+id/sortMap">
+
+                <item android:id="@+id/only_restaurants"
+                    android:title="Display only restaurants"
+                    android:icon="@drawable/restaurants_icon">
+                </item>
+
+                <item android:id="@+id/only_bars"
+                    android:title="Display only bars"
+                    android:icon="@drawable/bars_icon">
+                </item>
+
+                <item android:id="@+id/only_clubs"
+                    android:title="Display only clubs"
+                    android:icon="@drawable/clubs_icon">
+                </item>
+
+                </menu>
+        </item>
+
+
+
+
+
+
+
+</menu>
