@@ -248,8 +248,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     if (child.getKey().equals(userId)) {
                         User user = child.getValue(User.class);
                         username.setText(user.getUserName());
-                        if(mAuth.getCurrentUser().getDisplayName()!=null)
+                        if(mAuth.getCurrentUser().getDisplayName()!=null && !mAuth.getCurrentUser().getDisplayName().equals(""))
                         {
+                            String a = mAuth.getCurrentUser().getDisplayName();
                             Uri myUri = Uri.parse(user.getPhotoString());
                            Picasso.get().load(myUri).into(userPhoto);
                         }

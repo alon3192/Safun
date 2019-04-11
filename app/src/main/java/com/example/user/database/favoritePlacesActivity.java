@@ -219,7 +219,7 @@ public class favoritePlacesActivity extends AppCompatActivity implements Navigat
                     if (child.getKey().equals(userId)) {
                         User user = child.getValue(User.class);
                         username.setText(user.getUserName());    /*The user name will be displayed on the sidebar*/
-                        if (mAuth.getCurrentUser().getDisplayName() != null) {
+                        if (mAuth.getCurrentUser().getDisplayName() != null && !mAuth.getCurrentUser().getDisplayName().equals("")) {
                             Uri myUri = Uri.parse(user.getPhotoString());
                             Picasso.get().load(myUri).into(userPhoto);
                         }

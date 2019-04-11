@@ -469,7 +469,7 @@ public class ReportActivity extends AppCompatActivity implements NavigationView.
                     {
                         User user = child.getValue(User.class);
                         username.setText(user.getUserName());
-                        if(mAuth.getCurrentUser().getDisplayName()!=null)
+                        if(mAuth.getCurrentUser().getDisplayName()!=null && !mAuth.getCurrentUser().getDisplayName().equals(""))
                         {
                             Uri myUri = Uri.parse(user.getPhotoString());
                             Picasso.get().load(myUri).into(userPhoto);
