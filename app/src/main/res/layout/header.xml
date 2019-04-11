@@ -15,7 +15,7 @@
         android:id="@+id/userPhoto"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/safun_icon"/>
+        android:src="@drawable/safun_icon2"/>
 
 
 

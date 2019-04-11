@@ -1266,14 +1266,17 @@ public class PlaceActivity extends AppCompatActivity implements NavigationView.O
         int MILLI_TO_HOUR = 1000 * 60 * 60;
         Date currentDate = new Date();
         String userId = mAuth.getUid();
-        int difference=0;
+        long difference=0;
 
 
         for(Report report : reports)
         {
             if(report.getUserId().equals(userId))
             {
-               difference =  (int)(currentDate.getTime() - report.getDate().getTime())/MILLI_TO_HOUR;
+               difference =(currentDate.getTime() - report.getDate().getTime())/MILLI_TO_HOUR;
+               long a = currentDate.getTime();
+               long b = report.getDate().getTime();
+
                if(difference<3)
                {
                    return false;
