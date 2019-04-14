@@ -81,7 +81,7 @@ public class AccountActivity extends AppCompatActivity {
 
 
 
-        if(mAuth.getCurrentUser().getDisplayName()!=null)
+        if(mAuth.getCurrentUser().getDisplayName()!=null && !mAuth.getCurrentUser().getDisplayName().equals("") )
         {
             Intent i = getIntent();
             photoString = i.getStringExtra("personPhoto");
@@ -125,7 +125,7 @@ public class AccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(mAuth.getCurrentUser().getDisplayName()!=null)
+                if(mAuth.getCurrentUser().getDisplayName()!=null && !mAuth.getCurrentUser().getDisplayName().equals(""))
                 {
                     String userId = mAuth.getUid();
                     Map<String, Object> data = new HashMap<>();
@@ -237,7 +237,7 @@ public class AccountActivity extends AppCompatActivity {
     private void addUser()  /*In case of registration from Google Account*/
     {
         String userId = mAuth.getUid();
-        if(mAuth.getCurrentUser().getDisplayName()!=null)  /*In case of registration not from Google Account*/
+        if(mAuth.getCurrentUser().getDisplayName()!=null && !mAuth.getCurrentUser().getDisplayName().equals(""))  /*In case of registration not from Google Account*/
         {
             FirebaseUser user = mAuth.getCurrentUser();
             String userName = user.getDisplayName();

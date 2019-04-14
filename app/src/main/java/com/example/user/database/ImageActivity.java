@@ -172,14 +172,12 @@ public class ImageActivity extends AppCompatActivity implements NavigationView.O
 
             case R.id.favorite_places_btn: {
                 Intent intent = new Intent(this, favoritePlacesActivity.class);
-                if(mAuth.getCurrentUser().getDisplayName()!=null)
                     startActivity(intent);
                 break;
             }
 
             case R.id.settings_btn: {
                 Intent intent = new Intent(this, SettingsActivity.class);
-                if(mAuth.getCurrentUser().getDisplayName()!=null)
                     startActivity(intent);
                 break;
             }

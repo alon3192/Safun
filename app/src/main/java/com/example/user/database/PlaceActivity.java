@@ -1274,10 +1274,8 @@ public class PlaceActivity extends AppCompatActivity implements NavigationView.O
             if(report.getUserId().equals(userId))
             {
                difference =(currentDate.getTime() - report.getDate().getTime())/MILLI_TO_HOUR;
-               long a = currentDate.getTime();
-               long b = report.getDate().getTime();
 
-               if(difference<3)
+               if(difference<3 && difference>=0)
                {
                    return false;
                }
