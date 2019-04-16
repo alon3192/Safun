@@ -244,7 +244,7 @@ public class RatingTableActivity extends AppCompatActivity implements Navigation
 
 
         final TextView usernameTitle = new TextView(this);
-        usernameTitle.setText("Userמame     ");
+        usernameTitle.setText("Username     ");
         usernameTitle.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
         usernameTitle.setTypeface(null, Typeface.BOLD);
         usernameTitle.setTextSize(18);

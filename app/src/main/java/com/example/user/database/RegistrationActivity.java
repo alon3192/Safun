@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -123,6 +124,12 @@ public class RegistrationActivity extends AppCompatActivity {
                         Toast.makeText(RegistrationActivity.this, "One or more of the parameters are incorrect", Toast.LENGTH_LONG).show();
                         correctFlag = false;
                     }
+
+
+                   if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
+                    correctFlag = false;
+                  }
 
                     if (correctFlag)  /*There is no problem filling the fields*/ {
                         progressDialog.setMessage("Registrating user...");
